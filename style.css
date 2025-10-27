@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: Poppins, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.divgeral {
+    width: 95%;
+    max-width: 1400px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.cabecalho {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+h1 {
+    font-family: "Baloo 2", sans-serif;
+    color: #0D77A6;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #9B89B6;
+}
+
+.Foto img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.links {
+    display: flex;
+    background-color: #DBA7C0;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.linkcabecalho {
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.linkcabecalho:hover {
+    color: #9B89B6;
+}
+
+.sites {
+    display: flex;
+    gap: 1rem;
+}
+
+.imagemlink {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.imagemlink:hover {
+    transform: scale(1.1);
+}
+
+/* Seções */
+.container {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#apresentacao {
+    background-image: url(Imagens/adrian-infernus-GLf7bAwCdYg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    color: aliceblue;
+    padding: 4rem 2rem;
+}
+
+#palavras {
+    font-size: clamp(2rem, 5vw, 4rem);
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+#textinho {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin: 2rem 0;
+}
+
+#secao {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem;
+    color: #9B89B6;
+}
+
+.livros, .músicas, .jogos, .filmes {
+    width: 100%;
+    margin: 3rem auto;
+}
+
+.livros-container, .musicas-container, .jogos-container, .filmes-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.livro-card, .musica-card, .jogo-card, .filme-card {
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.livro-card:hover, .musica-card:hover, .jogo-card:hover, .filme-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Capas */
+.livro-capa, .musica-capa, .jogo-capa, .filme-capa {
+    width: 100%;
+    height: 380px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.livro-capa img, .musica-capa img, .jogo-capa img, .filme-capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.livro-card:hover .livro-capa img,
+.musica-card:hover .musica-capa img,
+.jogo-card:hover .jogo-capa img,
+.filme-card:hover .filme-capa img {
+    transform: scale(1.05);
+}
+
+/* Títulos */
+.livro-titulo, .musica-titulo, .jogo-titulo, .filme-titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0D77A6;
+    margin-bottom: 0.3rem;
+}
+
+/* Autores/Artistas/Estúdios */
+.livro-autor, .musica-cantor, .jogo-desenvolvedora, .filme-diretor {
+    font-size: 0.85rem;
+    color: #9B89B6;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+/* Comentários */
+.livro-comentario, .musica-comentario, .jogo-comentario, .filme-comentario {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #DBA7C0;
+    color: aliceblue;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+/* Responsividade */
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #palavras {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .livro-card, .musica-card, .jogo-card, .filme-card {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .divgeral {
+        width: 98%;
+    }
+
+    #palavras {
+        font-size: 1.8rem;
+    }
+
+    .imagemlink {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .livro-card, .musica-card, .jogo-card, .filme-card {
+        width: 90%;
+        max-width: 280px;
+    }
+}
